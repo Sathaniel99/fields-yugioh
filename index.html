@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero Yu-Gi-Oh!</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link href="./files/ico.png" rel="icon" sizes="any" type="image/svg+xml">
+    <meta name="description" content="Estilo visual de cada tablero de Yu-Gi-Oh!, se puede visualizar cada versión de este tipo.">
+</head>
+
+<body>
+    <select class="form-select mb-3 rounded-0 cursor-pointer" id="VS" aria-label="Version selector" data-bs-theme="dark"
+        style="max-width: 15rem;">
+        <option selected hidden>Selecciona una version:</option>
+        <option value="CV">2002 - 2013 (Classic Version)</option>
+        <option value="PZ">2014 (Pendulum Zone)</option>
+        <option value="EMZ">2017 (Extra Monster Zone)</option>
+        <option value="SD">2019 (Speed Duel)</option>
+    </select>
+    <main class="border border-2 border-dark p-4 bg-primary bg-opacity-10 rounded position-relative">
+        <div class="contain-fields w-100 h-100">
+            <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                <div class="p-4 border border-4 border-secondary-subtle bg-secondary bg-opacity-75">
+                    <h1 class="text-light fw-bold">SELECCIONE UN TABLERO</h1>
+                </div>
+            </div>
+        </div>
+        <div class="contain-fields" id="CV" style="display: none;">
+            <section class="d-flex flex-column gap-2" style="transform: rotateZ(180deg);">
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi field-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">FIELD ZONE</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi graveyard-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">GRAVEYARD</span>
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi extra-deck-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">EXTRA DECK</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">DECK</span>
+                    </div>
+                </div>
+            </section>
+            <section class="d-flex justify-content-between gap-5 my-2">
+                <div class="container-card out-game-cards" style="transform: rotateZ(180deg);">
+                    <div class="card-yugi" style="transform: rotateZ(90deg);">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp"
+                            style="filter: grayscale(1);">
+                    </div>
+                    <span class="text-cards">VOID ZONE</span>
+                </div>
+                <div>
+                    <div class="container-card out-game-cards">
+                        <div class="card-yugi" style="transform: rotateZ(90deg);">
+                            <img class="object-fit-container w-100 h-100" src="./files/card.webp"
+                                style="filter: grayscale(1);">
+                        </div>
+                        <span class="text-cards">VOID ZONE</span>
+                    </div>
+                </div>
+            </section>
+            <section class="d-flex flex-column gap-2">
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi field-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">FIELD ZONE</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi graveyard-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">GRAVEYARD</span>
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi extra-deck-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">EXTRA DECK</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">DECK</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="contain-fields" id="PZ" style="display: none;">
+            <section class="d-flex flex-column gap-2" style="transform: rotateZ(180deg);">
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <span class="text-cards" style="z-index: 3;">PENDULUM CARDS</span>
+                        <span class="position-absolute w-100 h-100 bg-danger bg-opacity-50" style="z-index: 2;"></span>
+                        <img class="object-fit-container w-100 h-100" src="./files/p_der.png" style="z-index: 1;">
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <span class="text-cards" style="z-index: 3;">PENDULUM CARDS</span>
+                        <span class="position-absolute w-100 h-100 bg-primary bg-opacity-50" style="z-index: 2;"></span>
+                        <img class="object-fit-container w-100 h-100" src="./files/p_izq.png" style="z-index: 1;">
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi extra-deck-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">EXTRA DECK</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">DECK</span>
+                    </div>
+                </div>
+            </section>
+            <section class="d-flex justify-content-between gap-5 my-2">
+                <div class="d-flex justify-content-end gap-2" style="transform: rotateZ(180deg);">
+                    <div class="container-card out-game-cards">
+                        <div class="card-yugi" style="transform: rotateZ(90deg);">
+                            <img class="object-fit-container w-100 h-100" src="./files/card.webp"
+                                style="filter: grayscale(1);">
+                        </div>
+                        <span class="text-cards">VOID ZONE</span>
+                    </div>
+                    <div
+                        class="card-yugi graveyard-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">GRAVEYARD</span>
+                    </div>
+                </div>
+                <div class="card-yugi field-cards position-relative d-flex justify-content-center align-items-center">
+                    <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                    <span class="text-cards">FIELD ZONE</span>
+                </div>
+                <div class="d-flex justify-content-end gap-2">
+                    <div class="container-card out-game-cards">
+                        <div class="card-yugi" style="transform: rotateZ(90deg);">
+                            <img class="object-fit-container w-100 h-100" src="./files/card.webp"
+                                style="filter: grayscale(1);">
+                        </div>
+                        <span class="text-cards">VOID ZONE</span>
+                    </div>
+                    <div
+                        class="card-yugi graveyard-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">GRAVEYARD</span>
+                    </div>
+                </div>
+            </section>
+            <section class="d-flex flex-column gap-2">
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <span class="text-cards" style="z-index: 3;">PENDULUM CARDS</span>
+                        <span class="position-absolute w-100 h-100 bg-danger bg-opacity-50" style="z-index: 2;"></span>
+                        <img class="object-fit-container w-100 h-100" src="./files/p_der.png" style="z-index: 1;">
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <span class="text-cards" style="z-index: 3;">PENDULUM CARDS</span>
+                        <span class="position-absolute w-100 h-100 bg-primary bg-opacity-50" style="z-index: 2;"></span>
+                        <img class="object-fit-container w-100 h-100" src="./files/p_izq.png" style="z-index: 1;">
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi extra-deck-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">EXTRA DECK</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">DECK</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="contain-fields" id="EMZ" style="display: none;">
+            <section class="d-flex flex-column gap-2" style="transform: rotateZ(180deg);">
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi field-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">FIELD ZONE</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi graveyard-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">GRAVEYARD</span>
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi extra-deck-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">EXTRA DECK</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card">
+                            <div
+                                class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                                <span class="text-cards" style="z-index: 3;">PENDULUM CARDS</span>
+                                <span class="position-absolute w-100 h-100 bg-primary bg-opacity-50"
+                                    style="z-index: 2;"></span>
+                                <img class="object-fit-container w-100 h-100" src="./files/p_izq.png"
+                                    style="z-index: 1;">
+                            </div>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card">
+                            <div
+                                class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                                <span class="text-cards" style="z-index: 3;">PENDULUM CARDS</span>
+                                <span class="position-absolute w-100 h-100 bg-danger bg-opacity-50"
+                                    style="z-index: 2;"></span>
+                                <img class="object-fit-container w-100 h-100" src="./files/p_der.png"
+                                    style="z-index: 1;">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">DECK</span>
+                    </div>
+                </div>
+            </section>
+            <section class="d-flex justify-content-between gap-5 my-2">
+                <div class="d-flex justify-content-between ps-5 w-100" style="transform: rotateZ(180deg);">
+                    <div>
+                        <div class="container-card link-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">EXTRA MONSTER ZONE</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="container-card out-game-cards">
+                            <div class="card-yugi" style="transform: rotateZ(90deg);">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp"
+                                    style="filter: grayscale(1);">
+                            </div>
+                            <span class="text-cards">VOID ZONE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between ps-5 w-100">
+                    <div>
+                        <div class="container-card link-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">EXTRA MONSTER ZONE</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="container-card out-game-cards">
+                            <div class="card-yugi" style="transform: rotateZ(90deg);">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp"
+                                    style="filter: grayscale(1);">
+                            </div>
+                            <span class="text-cards">VOID ZONE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="d-flex flex-column gap-2">
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi field-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">FIELD ZONE</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi graveyard-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">GRAVEYARD</span>
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi extra-deck-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">EXTRA DECK</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card">
+                            <div
+                                class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                                <span class="text-cards" style="z-index: 3;">PENDULUM CARDS</span>
+                                <span class="position-absolute w-100 h-100 bg-primary bg-opacity-50"
+                                    style="z-index: 2;"></span>
+                                <img class="object-fit-container w-100 h-100" src="./files/p_izq.png"
+                                    style="z-index: 1;">
+                            </div>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card">
+                            <div
+                                class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                                <span class="text-cards" style="z-index: 3;">PENDULUM CARDS</span>
+                                <span class="position-absolute w-100 h-100 bg-danger bg-opacity-50"
+                                    style="z-index: 2;"></span>
+                                <img class="object-fit-container w-100 h-100" src="./files/p_der.png"
+                                    style="z-index: 1;">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">DECK</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="contain-fields" id="SD" style="display: none;">
+            <section class="d-flex flex-column gap-2" style="transform: rotateZ(180deg);">
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi field-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">FIELD ZONE</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card hidden-cards">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card hidden-cards">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi graveyard-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">GRAVEYARD</span>
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi extra-deck-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">EXTRA DECK</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card hidden-cards">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl bg-black position-relative">
+                                <img class="position-absolute w-50 h-50 top-0 start-0 rotation" src="./files/gear.svg"
+                                    style="filter: invert(1);">
+                                <img class="position-absolute w-75 h-75 bottom-0 end-0 rotation" src="./files/gear.svg"
+                                    style="filter: invert(1);">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">DECK</span>
+                    </div>
+                </div>
+            </section>
+            <section class="d-flex justify-content-between gap-5 my-2">
+                <div class="container-card out-game-cards" style="transform: rotateZ(180deg);">
+                    <div class="card-yugi" style="transform: rotateZ(90deg);">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp"
+                            style="filter: grayscale(1);">
+                    </div>
+                    <span class="text-cards">VOID ZONE</span>
+                </div>
+                <div class="container-card out-game-cards">
+                    <div class="card-yugi" style="transform: rotateZ(90deg);">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp"
+                            style="filter: grayscale(1);">
+                    </div>
+                    <span class="text-cards">VOID ZONE</span>
+                </div>
+            </section>
+            <section class="d-flex flex-column gap-2">
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi field-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">FIELD ZONE</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card hidden-cards">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <div class="card-h position-absolute"></div>
+                            <span class="text-cards">MAIN MONSTER ZONE</span>
+                        </div>
+                        <div class="container-card hidden-cards">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi graveyard-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">GRAVEYARD</span>
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <div
+                        class="card-yugi extra-deck-cards position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">EXTRA DECK</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="container-card hidden-cards">
+                            <div class="card-yugi shadow-smpl">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card magic-cards">
+                            <div class="card-yugi">
+                                <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                            </div>
+                            <span class="text-cards">MAGIC/TRAP CARDS</span>
+                        </div>
+                        <div class="container-card">
+                            <div class="card-yugi shadow-smpl bg-black position-relative">
+                                <img class="position-absolute w-50 h-50 top-0 start-0 rotation" src="./files/gear.svg"
+                                    style="filter: invert(1);">
+                                <img class="position-absolute w-75 h-75 bottom-0 end-0 rotation" src="./files/gear.svg"
+                                    style="filter: invert(1);">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card-yugi shadow-smpl position-relative d-flex justify-content-center align-items-center">
+                        <img class="object-fit-container w-100 h-100" src="./files/card.webp">
+                        <span class="text-cards">DECK</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <img class="position-absolute bottom-0 end-0 m-4" src="./files/logo.png" alt="Yu-Gi-Oh! Logo" style="width: 15rem;">
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+body {
+    background: radial-gradient(circle at center, #667921, #6c757d, #212529);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-yugi {
+    width: 6rem;
+    height: 8rem;
+    box-shadow: var(--card-color) 0px 0px 10px;
+    pointer-events: none;
+}
+
+.container-card {
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.card-h {
+    border: dashed orange 1px;
+    width: 100%;
+    height: 6rem;
+    background-color: #6c757d7a;
+}
+
+.magic-cards {
+    filter: hue-rotate(90deg);
+    --card-color: black;
+}
+
+.field-cards {
+    filter: hue-rotate(115deg);
+    --card-color: black;
+}
+
+.extra-deck-cards {
+    filter: hue-rotate(270deg);
+    --card-color: black;
+}
+
+.graveyard-cards {
+    filter: grayscale(1);
+    --card-color: black;
+}
+
+.out-game-cards {
+    filter: invert(1);
+    --card-color: white;
+}
+
+.link-cards {
+    filter: hue-rotate(180deg);
+    --card-color: black;
+}
+
+.hidden-cards {
+    filter: opacity(0.1) grayscale(1);
+}
+
+.shadow-smpl {
+    box-shadow: black 0px 0px 10px;
+}
+
+.text-cards {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 10px;
+}
+
+main {
+    min-width: 58rem;
+    min-height: 45rem;
+    box-shadow: black 0px 0px 10px;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../files/R.png") center no-repeat;
+    background-size: contain;
+    filter: grayscale(1) brightness(1) blur(5px);
+    z-index: -1;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.rotation {
+    animation: rotate360 2s linear infinite;
+}
